@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -28,9 +28,9 @@
       <a href="#contacto" class="nav__cta" data-es="Contacto" data-en="Contact">Contacto</a>
     </nav>
 
-    <button class="lang-toggle" id="langToggle" type="button" aria-label="Cambiar idioma / Switch language">
+    <button class="lang-toggle" id="langToggle" type="button" role="group" aria-label="Cambiar idioma / Switch language">
       <span class="lang-toggle__opt is-active" data-lang="es">ES</span>
-      <span class="lang-toggle__sep">/</span>
+      <span class="lang-toggle__sep" aria-hidden="true">/</span>
       <span class="lang-toggle__opt" data-lang="en">EN</span>
     </button>
 
@@ -347,6 +347,6 @@
   <p class="footer__muted"><span data-es="Última actualización:" data-en="Last updated:">Última actualización:</span> <span id="lastUpdated"></span></p>
 </footer>
 
-<script src="script.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
