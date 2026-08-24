@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frank Disla — Ingeniero Jr. de Ciberseguridad | Blue Team</title>
+<meta name="description" content="Frank Luis Disla Valenzuela — Ingeniero Jr. de Ciberseguridad enfocado en Blue Team, triaje de alertas, respuesta a incidentes y análisis forense de logs.">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#inicio">Saltar al contenido</a>
+
+<!-- ===== NAV ===== -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#inicio" class="nav__logo">frank<span class="nav__logo-accent">@</span>disla<span class="nav__logo-muted">:~$</span></a>
+
+    <nav class="nav__links" id="navLinks">
+      <a href="#skills">Stack</a>
+      <a href="#proyectos">Casos</a>
+      <a href="#experiencia">Bitácora</a>
+      <a href="#certificaciones">Certificaciones</a>
+      <a href="#contacto" class="nav__cta">Contacto</a>
+    </nav>
+
+    <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="inicio">
+    <div class="hero__grid">
+      <div class="hero__copy">
+        <p class="hero__status">
+          <span class="status-dot" aria-hidden="true"></span>
+          Disponible para roles Jr. en Blue Team / SOC / Prevención de Fraude
+        </p>
+
+        <h1 class="hero__name">Frank Luis<br>Disla Valenzuela</h1>
+
+        <p class="hero__role">Ingeniero Jr. de Ciberseguridad — <span class="text-cyan">Blue Team</span> &amp; Respuesta a Incidentes</p>
+
+        <p class="hero__pitch">
+          Monitoreo de amenazas, triaje de alertas y análisis forense de logs, con foco en
+          prevención de fraude para el sector financiero. Formación práctica en SIEM/EDR,
+          documentación de IOCs y aplicación del ciclo <strong>PICERL</strong>.
+        </p>
+
+        <div class="hero__actions">
+          <a href="#proyectos" class="btn btn--primary">Ver casos resueltos</a>
+          <a href="#contacto" class="btn btn--ghost">Contactar</a>
+        </div>
+
+        <div class="hero__meta">
+          <span>Santo Domingo, RD</span>
+          <span class="dot-sep">·</span>
+          <span>ES Nativo</span>
+          <span class="dot-sep">·</span>
+          <span>EN C1 Advanced</span>
+        </div>
+      </div>
+
+      <div class="hero__console" aria-hidden="true">
+        <div class="console">
+          <div class="console__bar">
+            <span class="console__dot console__dot--red"></span>
+            <span class="console__dot console__dot--amber"></span>
+            <span class="console__dot console__dot--green"></span>
+            <span class="console__title">soc-monitor — tail -f access.log</span>
+          </div>
+          <div class="console__body" id="consoleBody"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="section" id="skills">
+    <div class="section__head">
+      <p class="eyebrow">Stack de seguridad</p>
+      <h2>Herramientas que opero a diario</h2>
+    </div>
+
+    <div class="modules">
+      <article class="module">
+        <div class="module__head">
+          <h3>Monitoreo &amp; Respuesta</h3>
+          <span class="badge badge--green">operativo</span>
+        </div>
+        <p class="module__desc">Detección, correlación de eventos y triaje de alertas en tiempo real.</p>
+        <ul class="tags">
+          <li>SIEM / Wazuh</li>
+          <li>EDR</li>
+          <li>Microsoft Defender</li>
+          <li>Wireshark</li>
+          <li>Fortinet FortiGate</li>
+        </ul>
+      </article>
+
+      <article class="module">
+        <div class="module__head">
+          <h3>Herramientas &amp; Scripting</h3>
+          <span class="badge badge--cyan">activo</span>
+        </div>
+        <p class="module__desc">Automatización defensiva y comprensión de TTPs ofensivos.</p>
+        <ul class="tags">
+          <li>Python</li>
+          <li>Nmap</li>
+          <li>Metasploit</li>
+          <li>Hardening Windows</li>
+          <li>Hardening Linux</li>
+        </ul>
+      </article>
+
+      <article class="module">
+        <div class="module__head">
+          <h3>Cumplimiento &amp; Financiero</h3>
+          <span class="badge badge--amber">en formación</span>
+        </div>
+        <p class="module__desc">Marco normativo aplicado a riesgo, fraude y datos personales.</p>
+        <ul class="tags">
+          <li>Ciberseguridad Financiera</li>
+          <li>Protección de Datos Personales</li>
+          <li>Peritaje e Informática Forense</li>
+          <li>Threat Intelligence &amp; OSINT</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== PROYECTOS / CASOS ===== -->
+  <section class="section" id="proyectos">
+    <div class="section__head">
+      <p class="eyebrow">Casos resueltos</p>
+      <h2>Proyectos propios</h2>
+    </div>
+
+    <div class="cases">
+      <article class="case">
+        <div class="case__id">CASE-001</div>
+        <div class="case__content">
+          <div class="case__top">
+            <h3>logsentry</h3>
+            <span class="badge badge--cyan">Herramienta SOC</span>
+          </div>
+          <p>
+            Analizador de logs Apache en Python que extrae IOCs, IPs frecuentes y patrones
+            de tráfico sospechoso para detección de anomalías. Pensado para triaje rápido
+            de eventos sin depender de herramientas comerciales, en operaciones Blue Team
+            con recursos limitados.
+          </p>
+          <ul class="tags">
+            <li>Python</li>
+            <li>Análisis de logs</li>
+            <li>Extracción de IOCs</li>
+          </ul>
+          <a href="https://github.com/FrankDisla/logsentry" class="case__link" target="_blank" rel="noopener">
+            Ver repositorio <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="case__id">CASE-002</div>
+        <div class="case__content">
+          <div class="case__top">
+            <h3>auditor-v1 / websec</h3>
+            <span class="badge badge--cyan">Auditoría Web</span>
+          </div>
+          <p>
+            Auditor de seguridad web en Python: SSL/TLS, cabeceras de seguridad, XSS, SQLi,
+            CORS, SSRF y enumeración de subdominios. Genera un reporte PDF automático con
+            puntuación CVSS, con arquitectura modular lista para integrarse en pipelines
+            de seguridad.
+          </p>
+          <ul class="tags">
+            <li>Python</li>
+            <li>Pentesting Web</li>
+            <li>CVSS</li>
+          </ul>
+          <a href="https://github.com/FrankDisla/auditor-v1" class="case__link" target="_blank" rel="noopener">
+            Ver repositorio <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCIA ===== -->
+  <section class="section" id="experiencia">
+    <div class="section__head">
+      <p class="eyebrow">Bitácora</p>
+      <h2>Experiencia práctica</h2>
+    </div>
+
+    <ol class="timeline">
+      <li class="timeline__item">
+        <div class="timeline__time">2025 — 2026</div>
+        <div class="timeline__content">
+          <h3>Operador de Seguridad Jr. — Formación Práctica</h3>
+          <p class="timeline__org">INDOTEL / BID – Talento Digital / CYMETRIA Group</p>
+          <ul>
+            <li>Formación de 80 horas en operaciones de ciberseguridad: Threat Intelligence, respuesta a incidentes, criptografía y seguridad IoT.</li>
+            <li>Aplicación del ciclo PICERL en escenarios simulados: preparación, identificación, contención, erradicación y recuperación.</li>
+            <li>Monitoreo y correlación de eventos con plataformas SIEM y EDR, triaje de alertas y documentación de IOCs.</li>
+            <li>Análisis de campañas de phishing/spear-phishing y tráfico de red con Wireshark para identificar infraestructura atacante.</li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="timeline__item">
+        <div class="timeline__time">2024 — Presente</div>
+        <div class="timeline__content">
+          <h3>Analista Blue Team — Entornos Simulados</h3>
+          <p class="timeline__org">Formación Autónoma / Plataformas Especializadas</p>
+          <ul>
+            <li>Práctica con Metasploit y Nmap para comprender TTPs ofensivos y fortalecer controles defensivos.</li>
+            <li>Generación de reportes de superficie de ataque.</li>
+            <li>Peritaje e informática forense: cadena de custodia y preservación de evidencia.</li>
+            <li>Hardening de sistemas Windows y Linux bajo políticas de seguridad.</li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="timeline__item">
+        <div class="timeline__time">2025 — Presente</div>
+        <div class="timeline__content">
+          <h3>Ingeniería en Ciberseguridad</h3>
+          <p class="timeline__org">UNICARIBE, Santo Domingo</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ===== CERTIFICACIONES ===== -->
+  <section class="section" id="certificaciones">
+    <div class="section__head">
+      <p class="eyebrow">Certificaciones</p>
+      <h2>Formación continua</h2>
+    </div>
+
+    <div class="certs">
+      <div class="cert"><span class="cert__check" aria-hidden="true">✔</span><div><h4>Cybersecurity Certification Associate</h4><p>Certiplus LLC · Jun 2026</p></div></div>
+      <div class="cert"><span class="cert__check" aria-hidden="true">✔</span><div><h4>Ciberseguridad – Nivel Intermedio (80h)</h4><p>INDOTEL / BID Talento Digital / CYMETRIA Group · Ene 2026</p></div></div>
+      <div class="cert"><span class="cert__check" aria-hidden="true">✔</span><div><h4>Consideraciones de Seguridad en la Arquitectura</h4><p>UBITS · Ago 2026</p></div></div>
+      <div class="cert"><span class="cert__check" aria-hidden="true">✔</span><div><h4>Fundamentos de los Derechos Digitales</h4><p>UBITS · Ago 2026</p></div></div>
+      <div class="cert"><span class="cert__check" aria-hidden="true">✔</span><div><h4>Networking Basics</h4><p>Cisco Networking Academy · Ago 2026</p></div></div>
+      <div class="cert"><span class="cert__check" aria-hidden="true">✔</span><div><h4>Implementa Frameworks de Ciberseguridad Financiera</h4><p>UBITS · Jul 2026</p></div></div>
+      <div class="cert"><span class="cert__check" aria-hidden="true">✔</span><div><h4>Estrategias de Protección de Datos Personales</h4><p>UBITS · Jul 2026</p></div></div>
+      <div class="cert"><span class="cert__check" aria-hidden="true">✔</span><div><h4>Ciberseguridad Nacional: Fundamentos, Prevención y Respuestas</h4><p>CNCS, RD · Jul 2026</p></div></div>
+      <div class="cert"><span class="cert__check" aria-hidden="true">✔</span><div><h4>Introducción a la Ciberseguridad</h4><p>Cisco Networking Academy · Feb 2026</p></div></div>
+      <div class="cert"><span class="cert__check" aria-hidden="true">✔</span><div><h4>Peritaje e Informática Forense (CSI)</h4><p>Hacker Mentor · Abr 2026</p></div></div>
+      <div class="cert"><span class="cert__check" aria-hidden="true">✔</span><div><h4>Ciberseguridad y Hacking Ético</h4><p>BIG School · Abr 2026</p></div></div>
+      <div class="cert"><span class="cert__check" aria-hidden="true">✔</span><div><h4>Nmap For Ethical Hacking Bootcamp</h4><p>Udemy · Dic 2025</p></div></div>
+      <div class="cert"><span class="cert__check" aria-hidden="true">✔</span><div><h4>Detecta y Defiéndete del Phishing</h4><p>Udemy · Dic 2025</p></div></div>
+      <div class="cert"><span class="cert__check" aria-hidden="true">✔</span><div><h4>Hacking Ético con Metasploit Framework</h4><p>Udemy · Nov 2025</p></div></div>
+      <div class="cert"><span class="cert__check" aria-hidden="true">✔</span><div><h4>CFEH – Fundamentos del Ethical Hacking</h4><p>Udemy / ExorciseThat · Sep 2025</p></div></div>
+      <div class="cert"><span class="cert__check" aria-hidden="true">✔</span><div><h4>Anonimato en la Red: Privacidad y Deep Web</h4><p>Udemy · Sep 2025</p></div></div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACTO ===== -->
+  <section class="section section--contact" id="contacto">
+    <div class="contact">
+      <p class="eyebrow">root@frankdisla:~$ contact --init</p>
+      <h2>Hablemos de tu equipo de seguridad</h2>
+      <p class="contact__sub">Abierto a roles Jr. en Blue Team, SOC y prevención de fraude en el sector financiero.</p>
+
+      <div class="contact__links">
+        <a href="mailto:frankluisdislavalenzuela@gmail.com" class="btn btn--primary">frankluisdislavalenzuela@gmail.com</a>
+        <a href="https://github.com/FrankDisla" target="_blank" rel="noopener" class="btn btn--ghost">GitHub ↗</a>
+        <a href="https://www.linkedin.com/in/frank-luis-disla-valenzuela-5024a9226" target="_blank" rel="noopener" class="btn btn--ghost">LinkedIn ↗</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>Frank Luis Disla Valenzuela · Santo Domingo, RD</p>
+  <p class="footer__muted">Última actualización: <span id="lastUpdated"></span></p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
