@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Frank Disla — Ingeniero Jr. de Ciberseguridad | Blue Team</title>
-<meta name="description" content="Frank Luis Disla Valenzuela — Ingeniero Jr. de Ciberseguridad enfocado en Blue Team, triaje de alertas, respuesta a incidentes y análisis forense de logs.">
+<title>Frank Disla — Ingeniero de Ciberseguridad | Red Team &amp; Blue Team</title>
+<meta name="description" content="Frank Luis Disla Valenzuela — Ingeniero de Ciberseguridad con perfil híbrido: auditoría y hacking ético (Red Team) y monitoreo, respuesta a incidentes y cloud security (Blue Team).">
 <link rel="icon" href="data:,">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -21,12 +21,18 @@
     <a href="#inicio" class="nav__logo">frank<span class="nav__logo-accent">@</span>disla<span class="nav__logo-muted">:~$</span></a>
 
     <nav class="nav__links" id="navLinks">
-      <a href="#skills">Stack</a>
-      <a href="#proyectos">Casos</a>
-      <a href="#experiencia">Bitácora</a>
-      <a href="#certificaciones">Certificaciones</a>
-      <a href="#contacto" class="nav__cta">Contacto</a>
+      <a href="#skills" data-es="Stack" data-en="Stack">Stack</a>
+      <a href="#proyectos" data-es="Casos" data-en="Cases">Casos</a>
+      <a href="#experiencia" data-es="Bitácora" data-en="Log">Bitácora</a>
+      <a href="#certificaciones" data-es="Certificaciones" data-en="Certifications">Certificaciones</a>
+      <a href="#contacto" class="nav__cta" data-es="Contacto" data-en="Contact">Contacto</a>
     </nav>
+
+    <button class="lang-toggle" id="langToggle" type="button" aria-label="Cambiar idioma / Switch language">
+      <span class="lang-toggle__opt is-active" data-lang="es">ES</span>
+      <span class="lang-toggle__sep">/</span>
+      <span class="lang-toggle__opt" data-lang="en">EN</span>
+    </button>
 
     <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
       <span></span><span></span><span></span>
@@ -42,30 +48,39 @@
       <div class="hero__copy">
         <p class="hero__status">
           <span class="status-dot" aria-hidden="true"></span>
-          Disponible para roles Jr. en Blue Team / SOC / Prevención de Fraude
+          <span data-es="Disponible para roles en Ciberseguridad — Red Team, Blue Team y SOC"
+                data-en="Available for Cybersecurity roles — Red Team, Blue Team &amp; SOC">Disponible para roles en Ciberseguridad — Red Team, Blue Team y SOC</span>
         </p>
 
         <h1 class="hero__name">Frank Luis<br>Disla Valenzuela</h1>
 
-        <p class="hero__role">Ingeniero Jr. de Ciberseguridad — <span class="text-cyan">Blue Team</span> &amp; Respuesta a Incidentes</p>
+        <p class="hero__role">
+          <span data-es="Ingeniero de Ciberseguridad" data-en="Cybersecurity Engineer">Ingeniero de Ciberseguridad</span>
+          <span class="dot-sep">/</span>
+          <span data-es="Analista de Ciberseguridad" data-en="Cybersecurity Analyst">Analista de Ciberseguridad</span>
+        </p>
 
-        <p class="hero__pitch">
-          Monitoreo de amenazas, triaje de alertas y análisis forense de logs, con foco en
-          prevención de fraude para el sector financiero. Formación práctica en SIEM/EDR,
-          documentación de IOCs y aplicación del ciclo <strong>PICERL</strong>.
+        <p class="hero__pitch"
+           data-es="Perfil híbrido con mentalidad Purple Team: audito, identifico vulnerabilidades y ejecuto pruebas de hacking ético (Red Team), además de asegurar, monitorear y responder ante incidentes (Blue Team). Aplico esta doble perspectiva a la prevención de fraude en el sector financiero y a la seguridad en entornos cloud."
+           data-en="Hybrid profile with a Purple Team mindset: I audit, identify vulnerabilities and run ethical hacking exercises (Red Team), while also securing, monitoring and responding to incidents (Blue Team). I apply this dual perspective to fraud prevention in the financial sector and to cloud security.">
+          Perfil híbrido con mentalidad Purple Team: audito, identifico vulnerabilidades y ejecuto pruebas de
+          hacking ético (Red Team), además de asegurar, monitorear y responder ante incidentes (Blue Team).
+          Aplico esta doble perspectiva a la prevención de fraude en el sector financiero y a la seguridad en
+          entornos cloud.
         </p>
 
         <div class="hero__actions">
-          <a href="#proyectos" class="btn btn--primary">Ver casos resueltos</a>
-          <a href="#contacto" class="btn btn--ghost">Contactar</a>
+          <a href="#proyectos" class="btn btn--primary" data-es="Ver casos resueltos" data-en="View case files">Ver casos resueltos</a>
+          <a href="#contacto" class="btn btn--ghost" data-es="Contactar" data-en="Get in touch">Contactar</a>
         </div>
 
         <div class="hero__meta">
           <span>Santo Domingo, RD</span>
-          <span class="dot-sep">·</span>
-          <span>ES Nativo</span>
-          <span class="dot-sep">·</span>
-          <span>EN C1 Advanced</span>
+        </div>
+
+        <div class="langs">
+          <span class="lang-pill"><span class="lang-pill__code">ES</span><strong data-es="Nativo" data-en="Native">Nativo</strong></span>
+          <span class="lang-pill"><span class="lang-pill__code">EN</span><strong data-es="C1 (Avanzado)" data-en="C1 (Advanced)">C1 (Avanzado)</strong></span>
         </div>
       </div>
 
@@ -86,17 +101,36 @@
   <!-- ===== SKILLS ===== -->
   <section class="section" id="skills">
     <div class="section__head">
-      <p class="eyebrow">Stack de seguridad</p>
-      <h2>Herramientas que opero a diario</h2>
+      <p class="eyebrow" data-es="Stack de seguridad" data-en="Security stack">Stack de seguridad</p>
+      <h2 data-es="Perfil híbrido: Red Team + Blue Team" data-en="Hybrid profile: Red Team + Blue Team">Perfil híbrido: Red Team + Blue Team</h2>
     </div>
 
-    <div class="modules">
-      <article class="module">
+    <div class="modules modules--4">
+      <article class="module module--red">
         <div class="module__head">
-          <h3>Monitoreo &amp; Respuesta</h3>
-          <span class="badge badge--green">operativo</span>
+          <h3 data-es="Red Team — Ofensivo" data-en="Red Team — Offensive">Red Team — Ofensivo</h3>
+          <span class="badge badge--red" data-es="ofensivo" data-en="offensive">ofensivo</span>
         </div>
-        <p class="module__desc">Detección, correlación de eventos y triaje de alertas en tiempo real.</p>
+        <p class="module__desc"
+           data-es="Auditoría, explotación controlada e identificación de vulnerabilidades."
+           data-en="Auditing, controlled exploitation and vulnerability identification.">Auditoría, explotación controlada e identificación de vulnerabilidades.</p>
+        <ul class="tags">
+          <li>Nmap</li>
+          <li>Metasploit</li>
+          <li>XSS / SQLi</li>
+          <li>CORS / SSRF</li>
+          <li data-es="Hacking Ético" data-en="Ethical Hacking">Hacking Ético</li>
+        </ul>
+      </article>
+
+      <article class="module module--blue">
+        <div class="module__head">
+          <h3 data-es="Blue Team — Defensivo" data-en="Blue Team — Defensive">Blue Team — Defensivo</h3>
+          <span class="badge badge--blue" data-es="defensivo" data-en="defensive">defensivo</span>
+        </div>
+        <p class="module__desc"
+           data-es="Detección, correlación de eventos y respuesta a incidentes en tiempo real."
+           data-en="Detection, event correlation and real-time incident response.">Detección, correlación de eventos y respuesta a incidentes en tiempo real.</p>
         <ul class="tags">
           <li>SIEM / Wazuh</li>
           <li>EDR</li>
@@ -106,32 +140,36 @@
         </ul>
       </article>
 
-      <article class="module">
+      <article class="module module--purple">
         <div class="module__head">
-          <h3>Herramientas &amp; Scripting</h3>
-          <span class="badge badge--cyan">activo</span>
+          <h3 data-es="Purple — Transversal" data-en="Purple — Cross-functional">Purple — Transversal</h3>
+          <span class="badge badge--purple" data-es="híbrido" data-en="hybrid">híbrido</span>
         </div>
-        <p class="module__desc">Automatización defensiva y comprensión de TTPs ofensivos.</p>
+        <p class="module__desc"
+           data-es="Inteligencia de amenazas, forense y cumplimiento que conecta ataque y defensa."
+           data-en="Threat intelligence, forensics and compliance connecting attack and defense.">Inteligencia de amenazas, forense y cumplimiento que conecta ataque y defensa.</p>
         <ul class="tags">
+          <li>Threat Intel &amp; OSINT</li>
+          <li data-es="Peritaje Forense" data-en="Digital Forensics">Peritaje Forense</li>
           <li>Python</li>
-          <li>Nmap</li>
-          <li>Metasploit</li>
-          <li>Hardening Windows</li>
-          <li>Hardening Linux</li>
+          <li data-es="Ciberseg. Financiera" data-en="Financial Cybersec">Ciberseg. Financiera</li>
         </ul>
       </article>
 
-      <article class="module">
+      <article class="module module--cloud">
         <div class="module__head">
-          <h3>Cumplimiento &amp; Financiero</h3>
-          <span class="badge badge--amber">en formación</span>
+          <h3 data-es="Cloud &amp; Networking" data-en="Cloud &amp; Networking">Cloud &amp; Networking</h3>
+          <span class="badge badge--cloud" data-es="azure" data-en="azure">azure</span>
         </div>
-        <p class="module__desc">Marco normativo aplicado a riesgo, fraude y datos personales.</p>
+        <p class="module__desc"
+           data-es="Fundamentos de redes aplicados a seguridad e identidad en Microsoft Azure."
+           data-en="Networking fundamentals applied to security and identity in Microsoft Azure.">Fundamentos de redes aplicados a seguridad e identidad en Microsoft Azure.</p>
         <ul class="tags">
-          <li>Ciberseguridad Financiera</li>
-          <li>Protección de Datos Personales</li>
-          <li>Peritaje e Informática Forense</li>
-          <li>Threat Intelligence &amp; OSINT</li>
+          <li>Azure VNets</li>
+          <li>NSGs</li>
+          <li>Entra ID / IAM</li>
+          <li data-es="VPN sitio a sitio" data-en="Site-to-site VPN">VPN sitio a sitio</li>
+          <li>TCP/IP · DNS · HTTP/S</li>
         </ul>
       </article>
     </div>
@@ -140,43 +178,45 @@
   <!-- ===== PROYECTOS / CASOS ===== -->
   <section class="section" id="proyectos">
     <div class="section__head">
-      <p class="eyebrow">Casos resueltos</p>
-      <h2>Proyectos propios</h2>
+      <p class="eyebrow" data-es="Casos resueltos" data-en="Case files">Casos resueltos</p>
+      <h2 data-es="Proyectos propios" data-en="Own projects">Proyectos propios</h2>
     </div>
 
     <div class="cases">
-      <article class="case">
+      <article class="case case--blue">
         <div class="case__id">CASE-001</div>
         <div class="case__content">
           <div class="case__top">
             <h3>logsentry</h3>
-            <span class="badge badge--cyan">Herramienta SOC</span>
+            <span class="badge badge--blue" data-es="Blue Team · SOC" data-en="Blue Team · SOC">Blue Team · SOC</span>
           </div>
-          <p>
+          <p data-es="Analizador de logs Apache en Python que extrae IOCs, IPs frecuentes y patrones de tráfico sospechoso para detección de anomalías. Diseñado para triaje rápido de eventos sin depender de herramientas comerciales, en operaciones Blue Team con recursos limitados."
+             data-en="Python-based Apache log analyzer that extracts IOCs, frequent IPs and suspicious traffic patterns for anomaly detection. Built for fast event triage without relying on commercial tooling, for Blue Team operations with limited resources.">
             Analizador de logs Apache en Python que extrae IOCs, IPs frecuentes y patrones
-            de tráfico sospechoso para detección de anomalías. Pensado para triaje rápido
+            de tráfico sospechoso para detección de anomalías. Diseñado para triaje rápido
             de eventos sin depender de herramientas comerciales, en operaciones Blue Team
             con recursos limitados.
           </p>
           <ul class="tags">
             <li>Python</li>
-            <li>Análisis de logs</li>
-            <li>Extracción de IOCs</li>
+            <li data-es="Análisis de logs" data-en="Log analysis">Análisis de logs</li>
+            <li data-es="Extracción de IOCs" data-en="IOC extraction">Extracción de IOCs</li>
           </ul>
           <a href="https://github.com/FrankDisla/logsentry" class="case__link" target="_blank" rel="noopener">
-            Ver repositorio <span aria-hidden="true">→</span>
+            <span data-es="Ver repositorio" data-en="View repository">Ver repositorio</span> <span aria-hidden="true">→</span>
           </a>
         </div>
       </article>
 
-      <article class="case">
+      <article class="case case--red">
         <div class="case__id">CASE-002</div>
         <div class="case__content">
           <div class="case__top">
             <h3>auditor-v1 / websec</h3>
-            <span class="badge badge--cyan">Auditoría Web</span>
+            <span class="badge badge--red" data-es="Red Team · Auditoría Web" data-en="Red Team · Web Audit">Red Team · Auditoría Web</span>
           </div>
-          <p>
+          <p data-es="Auditor de seguridad web en Python: SSL/TLS, cabeceras de seguridad, XSS, SQLi, CORS, SSRF y enumeración de subdominios. Genera un reporte PDF automático con puntuación CVSS, con arquitectura modular lista para integrarse en pipelines de seguridad."
+             data-en="Python web security auditor: SSL/TLS, security headers, XSS, SQLi, CORS, SSRF and subdomain enumeration. Generates an automatic PDF report with CVSS scoring, with a modular architecture ready to plug into security pipelines.">
             Auditor de seguridad web en Python: SSL/TLS, cabeceras de seguridad, XSS, SQLi,
             CORS, SSRF y enumeración de subdominios. Genera un reporte PDF automático con
             puntuación CVSS, con arquitectura modular lista para integrarse en pipelines
@@ -184,11 +224,11 @@
           </p>
           <ul class="tags">
             <li>Python</li>
-            <li>Pentesting Web</li>
+            <li data-es="Pentesting Web" data-en="Web Pentesting">Pentesting Web</li>
             <li>CVSS</li>
           </ul>
           <a href="https://github.com/FrankDisla/auditor-v1" class="case__link" target="_blank" rel="noopener">
-            Ver repositorio <span aria-hidden="true">→</span>
+            <span data-es="Ver repositorio" data-en="View repository">Ver repositorio</span> <span aria-hidden="true">→</span>
           </a>
         </div>
       </article>
@@ -198,43 +238,51 @@
   <!-- ===== EXPERIENCIA ===== -->
   <section class="section" id="experiencia">
     <div class="section__head">
-      <p class="eyebrow">Bitácora</p>
-      <h2>Experiencia práctica</h2>
+      <p class="eyebrow" data-es="Bitácora" data-en="Log">Bitácora</p>
+      <h2 data-es="Experiencia práctica" data-en="Practical experience">Experiencia práctica</h2>
     </div>
 
     <ol class="timeline">
       <li class="timeline__item">
         <div class="timeline__time">2025 — 2026</div>
         <div class="timeline__content">
-          <h3>Operador de Seguridad Jr. — Formación Práctica</h3>
+          <h3 data-es="Operador de Seguridad — Formación Práctica" data-en="Security Operator — Practical Training">Operador de Seguridad — Formación Práctica</h3>
           <p class="timeline__org">INDOTEL / BID – Talento Digital / CYMETRIA Group</p>
           <ul>
-            <li>Formación de 80 horas en operaciones de ciberseguridad: Threat Intelligence, respuesta a incidentes, criptografía y seguridad IoT.</li>
-            <li>Aplicación del ciclo PICERL en escenarios simulados: preparación, identificación, contención, erradicación y recuperación.</li>
-            <li>Monitoreo y correlación de eventos con plataformas SIEM y EDR, triaje de alertas y documentación de IOCs.</li>
-            <li>Análisis de campañas de phishing/spear-phishing y tráfico de red con Wireshark para identificar infraestructura atacante.</li>
+            <li data-es="Completé 80 horas de formación intensiva en Threat Intelligence, respuesta a incidentes, criptografía y seguridad IoT."
+                data-en="Completed 80 hours of intensive training in Threat Intelligence, incident response, cryptography and IoT security.">Completé 80 horas de formación intensiva en Threat Intelligence, respuesta a incidentes, criptografía y seguridad IoT.</li>
+            <li data-es="Apliqué el ciclo PICERL en escenarios simulados: preparación, identificación, contención, erradicación y recuperación."
+                data-en="Applied the PICERL cycle in simulated scenarios: preparation, identification, containment, eradication and recovery.">Apliqué el ciclo PICERL en escenarios simulados: preparación, identificación, contención, erradicación y recuperación.</li>
+            <li data-es="Correlacioné eventos en plataformas SIEM y EDR, ejecutando triaje de alertas y documentación de IOCs."
+                data-en="Correlated events across SIEM and EDR platforms, executing alert triage and IOC documentation.">Correlacioné eventos en plataformas SIEM y EDR, ejecutando triaje de alertas y documentación de IOCs.</li>
+            <li data-es="Analicé campañas de phishing/spear-phishing y tráfico de red con Wireshark para identificar infraestructura atacante y TTPs."
+                data-en="Analyzed phishing/spear-phishing campaigns and network traffic with Wireshark to identify attacker infrastructure and TTPs.">Analicé campañas de phishing/spear-phishing y tráfico de red con Wireshark para identificar infraestructura atacante y TTPs.</li>
           </ul>
         </div>
       </li>
 
       <li class="timeline__item">
-        <div class="timeline__time">2024 — Presente</div>
+        <div class="timeline__time" data-es="2024 — Presente" data-en="2024 — Present">2024 — Presente</div>
         <div class="timeline__content">
-          <h3>Analista Blue Team — Entornos Simulados</h3>
-          <p class="timeline__org">Formación Autónoma / Plataformas Especializadas</p>
+          <h3 data-es="Analista Purple Team — Entornos Simulados" data-en="Purple Team Analyst — Simulated Environments">Analista Purple Team — Entornos Simulados</h3>
+          <p class="timeline__org" data-es="Formación Autónoma / Plataformas Especializadas" data-en="Self-driven Training / Specialized Platforms">Formación Autónoma / Plataformas Especializadas</p>
           <ul>
-            <li>Práctica con Metasploit y Nmap para comprender TTPs ofensivos y fortalecer controles defensivos.</li>
-            <li>Generación de reportes de superficie de ataque.</li>
-            <li>Peritaje e informática forense: cadena de custodia y preservación de evidencia.</li>
-            <li>Hardening de sistemas Windows y Linux bajo políticas de seguridad.</li>
+            <li data-es="Ejecuté pruebas ofensivas con Metasploit y Nmap para comprender TTPs de atacantes y reforzar controles defensivos."
+                data-en="Executed offensive testing with Metasploit and Nmap to understand attacker TTPs and strengthen defensive controls.">Ejecuté pruebas ofensivas con Metasploit y Nmap para comprender TTPs de atacantes y reforzar controles defensivos.</li>
+            <li data-es="Generé reportes de superficie de ataque a partir de escaneos y enumeración de servicios."
+                data-en="Produced attack-surface reports from scans and service enumeration.">Generé reportes de superficie de ataque a partir de escaneos y enumeración de servicios.</li>
+            <li data-es="Apliqué peritaje e informática forense, preservando cadena de custodia y evidencia digital."
+                data-en="Applied digital forensics practices, preserving chain of custody and digital evidence.">Apliqué peritaje e informática forense, preservando cadena de custodia y evidencia digital.</li>
+            <li data-es="Hardenicé sistemas Windows y Linux conforme a políticas de seguridad."
+                data-en="Hardened Windows and Linux systems in line with security policies.">Hardenicé sistemas Windows y Linux conforme a políticas de seguridad.</li>
           </ul>
         </div>
       </li>
 
       <li class="timeline__item">
-        <div class="timeline__time">2025 — Presente</div>
+        <div class="timeline__time" data-es="2025 — Presente" data-en="2025 — Present">2025 — Presente</div>
         <div class="timeline__content">
-          <h3>Ingeniería en Ciberseguridad</h3>
+          <h3 data-es="Ingeniería en Ciberseguridad" data-en="Cybersecurity Engineering">Ingeniería en Ciberseguridad</h3>
           <p class="timeline__org">UNICARIBE, Santo Domingo</p>
         </div>
       </li>
@@ -244,27 +292,34 @@
   <!-- ===== CERTIFICACIONES ===== -->
   <section class="section" id="certificaciones">
     <div class="section__head">
-      <p class="eyebrow">Certificaciones</p>
-      <h2>Formación continua</h2>
+      <p class="eyebrow" data-es="Certificaciones" data-en="Certifications">Certificaciones</p>
+      <h2 data-es="Formación continua" data-en="Continuous training">Formación continua</h2>
+    </div>
+
+    <div class="cert-legend">
+      <span class="cert-legend__item"><i class="dot dot--red"></i><span data-es="Red Team" data-en="Red Team">Red Team</span></span>
+      <span class="cert-legend__item"><i class="dot dot--blue"></i><span data-es="Blue Team" data-en="Blue Team">Blue Team</span></span>
+      <span class="cert-legend__item"><i class="dot dot--purple"></i><span data-es="Purple / Cumplimiento" data-en="Purple / Compliance">Purple / Cumplimiento</span></span>
+      <span class="cert-legend__item"><i class="dot dot--cloud"></i><span data-es="Cloud & Networking" data-en="Cloud & Networking">Cloud &amp; Networking</span></span>
     </div>
 
     <div class="certs">
-      <div class="cert"><span class="cert__check" aria-hidden="true">✔</span><div><h4>Cybersecurity Certification Associate</h4><p>Certiplus LLC · Jun 2026</p></div></div>
-      <div class="cert"><span class="cert__check" aria-hidden="true">✔</span><div><h4>Ciberseguridad – Nivel Intermedio (80h)</h4><p>INDOTEL / BID Talento Digital / CYMETRIA Group · Ene 2026</p></div></div>
-      <div class="cert"><span class="cert__check" aria-hidden="true">✔</span><div><h4>Consideraciones de Seguridad en la Arquitectura</h4><p>UBITS · Ago 2026</p></div></div>
-      <div class="cert"><span class="cert__check" aria-hidden="true">✔</span><div><h4>Fundamentos de los Derechos Digitales</h4><p>UBITS · Ago 2026</p></div></div>
-      <div class="cert"><span class="cert__check" aria-hidden="true">✔</span><div><h4>Networking Basics</h4><p>Cisco Networking Academy · Ago 2026</p></div></div>
-      <div class="cert"><span class="cert__check" aria-hidden="true">✔</span><div><h4>Implementa Frameworks de Ciberseguridad Financiera</h4><p>UBITS · Jul 2026</p></div></div>
-      <div class="cert"><span class="cert__check" aria-hidden="true">✔</span><div><h4>Estrategias de Protección de Datos Personales</h4><p>UBITS · Jul 2026</p></div></div>
-      <div class="cert"><span class="cert__check" aria-hidden="true">✔</span><div><h4>Ciberseguridad Nacional: Fundamentos, Prevención y Respuestas</h4><p>CNCS, RD · Jul 2026</p></div></div>
-      <div class="cert"><span class="cert__check" aria-hidden="true">✔</span><div><h4>Introducción a la Ciberseguridad</h4><p>Cisco Networking Academy · Feb 2026</p></div></div>
-      <div class="cert"><span class="cert__check" aria-hidden="true">✔</span><div><h4>Peritaje e Informática Forense (CSI)</h4><p>Hacker Mentor · Abr 2026</p></div></div>
-      <div class="cert"><span class="cert__check" aria-hidden="true">✔</span><div><h4>Ciberseguridad y Hacking Ético</h4><p>BIG School · Abr 2026</p></div></div>
-      <div class="cert"><span class="cert__check" aria-hidden="true">✔</span><div><h4>Nmap For Ethical Hacking Bootcamp</h4><p>Udemy · Dic 2025</p></div></div>
-      <div class="cert"><span class="cert__check" aria-hidden="true">✔</span><div><h4>Detecta y Defiéndete del Phishing</h4><p>Udemy · Dic 2025</p></div></div>
-      <div class="cert"><span class="cert__check" aria-hidden="true">✔</span><div><h4>Hacking Ético con Metasploit Framework</h4><p>Udemy · Nov 2025</p></div></div>
-      <div class="cert"><span class="cert__check" aria-hidden="true">✔</span><div><h4>CFEH – Fundamentos del Ethical Hacking</h4><p>Udemy / ExorciseThat · Sep 2025</p></div></div>
-      <div class="cert"><span class="cert__check" aria-hidden="true">✔</span><div><h4>Anonimato en la Red: Privacidad y Deep Web</h4><p>Udemy · Sep 2025</p></div></div>
+      <div class="cert cert--purple"><span class="cert__check" aria-hidden="true">✔</span><div><h4>Cybersecurity Certification Associate</h4><p>Certiplus LLC · Jun 2026</p></div></div>
+      <div class="cert cert--blue"><span class="cert__check" aria-hidden="true">✔</span><div><h4 data-es="Ciberseguridad – Nivel Intermedio (80h)" data-en="Cybersecurity – Intermediate Level (80h)">Ciberseguridad – Nivel Intermedio (80h)</h4><p>INDOTEL / BID Talento Digital / CYMETRIA Group · Ene 2026</p></div></div>
+      <div class="cert cert--cloud"><span class="cert__check" aria-hidden="true">✔</span><div><h4 data-es="Consideraciones de Seguridad en la Arquitectura" data-en="Security Considerations in Architecture">Consideraciones de Seguridad en la Arquitectura</h4><p>UBITS · Ago 2026</p></div></div>
+      <div class="cert cert--purple"><span class="cert__check" aria-hidden="true">✔</span><div><h4 data-es="Fundamentos de los Derechos Digitales" data-en="Fundamentals of Digital Rights">Fundamentos de los Derechos Digitales</h4><p>UBITS · Ago 2026</p></div></div>
+      <div class="cert cert--cloud"><span class="cert__check" aria-hidden="true">✔</span><div><h4>Networking Basics</h4><p>Cisco Networking Academy · Ago 2026</p></div></div>
+      <div class="cert cert--purple"><span class="cert__check" aria-hidden="true">✔</span><div><h4 data-es="Implementa Frameworks de Ciberseguridad Financiera" data-en="Implementing Financial Cybersecurity Frameworks">Implementa Frameworks de Ciberseguridad Financiera</h4><p>UBITS · Jul 2026</p></div></div>
+      <div class="cert cert--purple"><span class="cert__check" aria-hidden="true">✔</span><div><h4 data-es="Estrategias de Protección de Datos Personales" data-en="Personal Data Protection Strategies">Estrategias de Protección de Datos Personales</h4><p>UBITS · Jul 2026</p></div></div>
+      <div class="cert cert--purple"><span class="cert__check" aria-hidden="true">✔</span><div><h4 data-es="Ciberseguridad Nacional: Fundamentos, Prevención y Respuestas" data-en="National Cybersecurity: Fundamentals, Prevention & Response">Ciberseguridad Nacional: Fundamentos, Prevención y Respuestas</h4><p>CNCS, RD · Jul 2026</p></div></div>
+      <div class="cert cert--purple"><span class="cert__check" aria-hidden="true">✔</span><div><h4 data-es="Introducción a la Ciberseguridad" data-en="Introduction to Cybersecurity">Introducción a la Ciberseguridad</h4><p>Cisco Networking Academy · Feb 2026</p></div></div>
+      <div class="cert cert--blue"><span class="cert__check" aria-hidden="true">✔</span><div><h4 data-es="Peritaje e Informática Forense (CSI)" data-en="Digital Forensics (CSI)">Peritaje e Informática Forense (CSI)</h4><p>Hacker Mentor · Abr 2026</p></div></div>
+      <div class="cert cert--red"><span class="cert__check" aria-hidden="true">✔</span><div><h4 data-es="Ciberseguridad y Hacking Ético" data-en="Cybersecurity and Ethical Hacking">Ciberseguridad y Hacking Ético</h4><p>BIG School · Abr 2026</p></div></div>
+      <div class="cert cert--red"><span class="cert__check" aria-hidden="true">✔</span><div><h4 data-es="Nmap For Ethical Hacking Bootcamp" data-en="Nmap For Ethical Hacking Bootcamp">Nmap For Ethical Hacking Bootcamp</h4><p>Udemy · Dic 2025</p></div></div>
+      <div class="cert cert--blue"><span class="cert__check" aria-hidden="true">✔</span><div><h4 data-es="Detecta y Defiéndete del Phishing" data-en="Detect and Defend Against Phishing">Detecta y Defiéndete del Phishing</h4><p>Udemy · Dic 2025</p></div></div>
+      <div class="cert cert--red"><span class="cert__check" aria-hidden="true">✔</span><div><h4 data-es="Hacking Ético con Metasploit Framework" data-en="Ethical Hacking with Metasploit Framework">Hacking Ético con Metasploit Framework</h4><p>Udemy · Nov 2025</p></div></div>
+      <div class="cert cert--red"><span class="cert__check" aria-hidden="true">✔</span><div><h4 data-es="CFEH – Fundamentos del Ethical Hacking" data-en="CFEH – Ethical Hacking Fundamentals">CFEH – Fundamentos del Ethical Hacking</h4><p>Udemy / ExorciseThat · Sep 2025</p></div></div>
+      <div class="cert cert--red"><span class="cert__check" aria-hidden="true">✔</span><div><h4 data-es="Anonimato en la Red: Privacidad y Deep Web" data-en="Anonymity Online: Privacy and the Deep Web">Anonimato en la Red: Privacidad y Deep Web</h4><p>Udemy · Sep 2025</p></div></div>
     </div>
   </section>
 
@@ -272,8 +327,10 @@
   <section class="section section--contact" id="contacto">
     <div class="contact">
       <p class="eyebrow">root@frankdisla:~$ contact --init</p>
-      <h2>Hablemos de tu equipo de seguridad</h2>
-      <p class="contact__sub">Abierto a roles Jr. en Blue Team, SOC y prevención de fraude en el sector financiero.</p>
+      <h2 data-es="Hablemos de tu equipo de seguridad" data-en="Let's talk about your security team">Hablemos de tu equipo de seguridad</h2>
+      <p class="contact__sub"
+         data-es="Abierto a roles en Ciberseguridad — Red Team, Blue Team, SOC y prevención de fraude en el sector financiero."
+         data-en="Open to Cybersecurity roles — Red Team, Blue Team, SOC and fraud prevention in the financial sector.">Abierto a roles en Ciberseguridad — Red Team, Blue Team, SOC y prevención de fraude en el sector financiero.</p>
 
       <div class="contact__links">
         <a href="mailto:frankluisdislavalenzuela@gmail.com" class="btn btn--primary">frankluisdislavalenzuela@gmail.com</a>
@@ -287,9 +344,9 @@
 
 <footer class="footer">
   <p>Frank Luis Disla Valenzuela · Santo Domingo, RD</p>
-  <p class="footer__muted">Última actualización: <span id="lastUpdated"></span></p>
+  <p class="footer__muted"><span data-es="Última actualización:" data-en="Last updated:">Última actualización:</span> <span id="lastUpdated"></span></p>
 </footer>
 
-<script src="script.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>

@@ -77,10 +77,34 @@ git push -u origin main
 ## Personalización rápida
 
 - **Colores / severidad SOC**: variables al inicio de `css/style.css`, en `:root` (`--cyan`, `--amber`, `--green`, etc.).
-- **Texto de la consola animada del hero**: arreglo `consoleLines` en `js/script.js`.
+- **Colores Red / Blue / Purple / Cloud**: variables `--team-red`, `--team-blue`, `--team-purple`, `--team-cloud` en `css/style.css`. Se usan en `.badge--red/blue/purple/cloud`, `.module--*`, `.case--*` y `.cert--*`.
+- **Texto de la consola animada del hero**: objeto `consoleLinesByLang` (claves `es` / `en`) en `js/script.js`.
 - **Enlaces de contacto**: sección `#contacto` en `index.html` (correo, GitHub, LinkedIn).
-- **Nuevos proyectos**: duplica un bloque `<article class="case">` en `index.html` y sube el número de `CASE-00X`.
-- **Nuevas certificaciones**: duplica un bloque `<div class="cert">` en la sección `#certificaciones`.
+- **Nuevos proyectos**: duplica un bloque `<article class="case">` en `index.html`, sube el número de `CASE-00X` y aplica `case--red` o `case--blue` según su naturaleza.
+- **Nuevas certificaciones**: duplica un bloque `<div class="cert">` en `#certificaciones` y añade la clase `cert--red`, `cert--blue`, `cert--purple` o `cert--cloud` según corresponda.
+
+## Sistema Red / Blue / Purple / Cloud
+
+Las habilidades, proyectos y certificaciones están clasificados visualmente:
+
+| Clase CSS         | Color   | Significado                                  |
+|--------------------|---------|-----------------------------------------------|
+| `--red` / `.badge--red`       | Carmesí | Red Team — ofensivo (pentesting, hacking ético) |
+| `--blue` / `.badge--blue`     | Cian    | Blue Team — defensivo (SOC, monitoreo, IR)     |
+| `--purple` / `.badge--purple` | Violeta | Purple / transversal (forense, cumplimiento, OSINT) |
+| `--cloud` / `.badge--cloud`   | Verde azulado | Cloud & Networking (Azure)              |
+
+Para reclasificar un elemento, cambia la clase modificadora (`module--red`, `cert--blue`, etc.) y, si aplica, el texto del `<span class="badge">`.
+
+## Bilingüe (ES / EN)
+
+El botón **ES / EN** de la barra de navegación alterna todo el texto marcado con los atributos `data-es` y `data-en` en `index.html` (incluyendo la consola animada del hero). La preferencia se guarda en `localStorage` y, si el visitante no ha elegido antes, se detecta el idioma del navegador.
+
+Para traducir contenido nuevo, agrega ambos atributos al elemento:
+```html
+<h3 data-es="Texto en español" data-en="Text in English">Texto en español</h3>
+```
+El script `js/script.js` se encarga del resto — no requiere tocar el JS al añadir texto nuevo.
 
 ## Notas técnicas
 
@@ -88,3 +112,4 @@ git push -u origin main
 - Respeta `prefers-reduced-motion`: si el visitante lo activa en su sistema, la animación de la consola se muestra estática.
 - Foco de teclado visible en todos los enlaces y botones (accesibilidad).
 - Totalmente responsivo (probado en breakpoints de escritorio, tablet y móvil).
+- `localStorage` se usa únicamente para recordar el idioma elegido — no se envía a ningún servidor.
