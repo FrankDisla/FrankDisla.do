@@ -97,17 +97,34 @@ const consoleLinesByLang = {
 const consoleBody = document.getElementById('consoleBody');
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+// Prompt del "operador" y comandos que teclea entre cada ciclo de logs,
+// para que la consola se vea usada activamente y no solo reproduciendo un loop.
+const consolePromptByLang = {
+  es: { user: 'frank@soc', cwd: '~' },
+  en: { user: 'frank@soc', cwd: '~' },
+};
+
+const consoleCommands = [
+  'tail -f access.log',
+  'grep ALERT access.log',
+  'systemctl status wazuh-agent',
+  'clear && ./monitor.sh --resume',
+];
+
 let consoleRunToken = 0;
 
 function typeConsole(lang) {
   if (!consoleBody) return;
   const lines = consoleLinesByLang[lang] || consoleLinesByLang.es;
+  const prompt = consolePromptByLang[lang] || consolePromptByLang.es;
   const myToken = ++consoleRunToken;
 
   if (prefersReducedMotion) {
-    consoleBody.innerHTML = lines
+    const logHtml = lines
       .map(l => `<span class="console__line"><span class="lvl-${l.level}">[${l.level}]</span> ${l.text}</span>`)
       .join('');
+    const promptHtml = `<span class="console__line console__prompt"><span class="console__prompt-label">${prompt.user}:${prompt.cwd}$ </span><span class="console__prompt-cmd">${consoleCommands[0]}</span></span>`;
+    consoleBody.innerHTML = logHtml + promptHtml;
     return;
   }
 
@@ -115,14 +132,12 @@ function typeConsole(lang) {
   let lineIndex = 0;
 
   function nextLine() {
-    if (myToken !== consoleRunToken) return; // language changed mid-animation
+    if (myToken !== consoleRunToken) return; // idioma cambió a mitad de animación
     if (lineIndex >= lines.length) {
       setTimeout(() => {
         if (myToken !== consoleRunToken) return;
-        consoleBody.innerHTML = '';
-        lineIndex = 0;
-        nextLine();
-      }, 2600);
+        promptForCommand();
+      }, 900);
       return;
     }
 
@@ -160,6 +175,60 @@ function typeConsole(lang) {
       }
     }
     typeChar();
+  }
+
+  // Tras el último log, la consola queda "esperando" un comando (cursor
+  // parpadeando, inactivo), luego lo teclea y recién ahí reinicia el ciclo —
+  // da la sensación de que alguien la está operando en vivo.
+  function promptForCommand() {
+    if (myToken !== consoleRunToken) return;
+
+    const promptLine = document.createElement('span');
+    promptLine.className = 'console__line console__prompt';
+
+    const label = document.createElement('span');
+    label.className = 'console__prompt-label';
+    label.textContent = `${prompt.user}:${prompt.cwd}$ `;
+    promptLine.appendChild(label);
+
+    const cmdEl = document.createElement('span');
+    cmdEl.className = 'console__prompt-cmd';
+    promptLine.appendChild(cmdEl);
+
+    const cursor = document.createElement('span');
+    cursor.className = 'console__cursor';
+    promptLine.appendChild(cursor);
+
+    consoleBody.appendChild(promptLine);
+
+    const idleWait = 1300 + Math.random() * 1000; // pausa "pensando" antes de teclear
+    setTimeout(() => {
+      if (myToken !== consoleRunToken) return;
+      const command = consoleCommands[Math.floor(Math.random() * consoleCommands.length)];
+      let charIndex = 0;
+      const typeSpeed = 42;
+
+      function typeCmdChar() {
+        if (myToken !== consoleRunToken) return;
+        if (charIndex < command.length) {
+          cmdEl.textContent += command.charAt(charIndex);
+          charIndex++;
+          setTimeout(typeCmdChar, typeSpeed);
+        } else {
+          setTimeout(() => {
+            if (myToken !== consoleRunToken) return;
+            cursor.remove();
+            setTimeout(() => {
+              if (myToken !== consoleRunToken) return;
+              consoleBody.innerHTML = '';
+              lineIndex = 0;
+              nextLine();
+            }, 550);
+          }, 450);
+        }
+      }
+      typeCmdChar();
+    }, idleWait);
   }
 
   nextLine();
