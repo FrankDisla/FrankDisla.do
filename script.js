@@ -23,7 +23,7 @@ if (navToggle && navLinks) {
 // Cada elemento traducible trae data-es / data-en en el HTML.
 // Se guarda la preferencia en localStorage.
 // ==========================================================
-const LANG_KEY = 'frankdisla-lang';
+const LANG_KEY = 'preferred_lang';
 const langToggle = document.getElementById('langToggle');
 const translatable = document.querySelectorAll('[data-es][data-en]');
 
