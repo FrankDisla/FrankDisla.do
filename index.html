@@ -1,59 +1,46 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Frank Disla — Ingeniero de Ciberseguridad | Purple Team Analyst</title>
-<meta name="description" content="Frank Luis Disla Valenzuela — Ingeniero de Ciberseguridad / Analista Purple Team. Auditoría ofensiva (Red Team), respuesta a incidentes (Blue Team) y seguridad en la nube (Azure).">
-<link rel="icon" href="data:,">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frank Luis Disla Valenzuela | Cybersecurity Engineer & Purple Team</title>
+  
+  <!-- Typography HTB Style -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<a class="skip-link" href="#inicio">Saltar al contenido</a>
-<div class="grid-overlay" aria-hidden="true"></div>
+  <!-- ===== NAVIGATION ===== -->
+  <header class="nav">
+    <div class="nav__inner">
+      <div class="nav__logo">
+        <span class="htb-green">[+]</span> FRANK_DISLA <span class="nav__logo-muted">// SOC_LAB</span>
+      </div>
+      <nav class="nav__links">
+        <a href="#skills">STACK</a>
+        <a href="#proyectos">CASOS</a>
+        <a href="#certificaciones">CERTS</a>
+        <a href="#contacto" class="nav__cta">CONTACTO</a>
+      </nav>
+      <div class="lang-toggle">
+        <span class="lang-toggle__opt is-active" data-lang="es">ES</span>
+        <span class="lang-toggle__opt" data-lang="en">EN</span>
+      </div>
+    </div>
+  </header>
 
-<!-- ===== NAV ===== -->
-<header class="nav" id="nav">
-  <div class="nav__inner">
-    <a href="#inicio" class="nav__logo">
-      <span class="nav__logo-glyph" aria-hidden="true">&gt;_</span>
-      <span class="nav__logo-name">frank<span class="nav__logo-accent">@</span>disla</span>
-    </a>
-
-    <nav class="nav__links" id="navLinks">
-      <a href="#skills" data-es="Stack" data-en="Stack">Stack</a>
-      <a href="#proyectos" data-es="Casos" data-en="Cases">Casos</a>
-      <a href="#experiencia" data-es="Experiencia" data-en="Experience">Experiencia</a>
-      <a href="#certificaciones" data-es="Certificaciones" data-en="Certifications">Certificaciones</a>
-      <a href="#contacto" class="nav__cta" data-es="Contacto" data-en="Contact">Contacto</a>
-    </nav>
-
-    <button class="lang-toggle" id="langToggle" type="button" role="group" aria-label="Cambiar idioma / Switch language">
-      <span class="lang-toggle__opt is-active" data-lang="es">ES</span>
-      <span class="lang-toggle__sep" aria-hidden="true">/</span>
-      <span class="lang-toggle__opt" data-lang="en">EN</span>
-    </button>
-
-    <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</header>
-
-<main>
-
-  <!-- ===== HERO — OPERATOR DASHBOARD ===== -->
+  <!-- ===== HERO / SOC OPERATOR DASHBOARD ===== -->
   <section class="hero" id="inicio">
     <div class="hero__grid">
       <div class="hero__copy">
         <p class="hero__status">
-          <span class="status-dot" aria-hidden="true"></span>
-          <span data-es="DISPONIBLE PARA ROLES EN CIBERSEGURIDAD"
-                data-en="AVAILABLE FOR CYBERSECURITY ROLES">DISPONIBLE PARA ROLES EN CIBERSEGURIDAD</span>
+          <span class="status-dot"></span>
+          <span data-es="OPERADOR SOC / PURPLE TEAM — DISPONIBLE PARA CONTRATO" 
+                data-en="SOC OPERATOR / PURPLE TEAM — AVAILABLE FOR DEPLOYMENT">OPERADOR SOC / PURPLE TEAM — DISPONIBLE PARA CONTRATO</span>
         </p>
 
         <h1 class="hero__name">Frank Luis<br>Disla Valenzuela</h1>
@@ -65,498 +52,279 @@
         </p>
 
         <p class="hero__pitch"
-           data-es="Perfil híbrido enfocado en anticipación táctica y capacidad analítica aplicada a la seguridad ofensiva y defensiva: auditoría y explotación controlada (Red Team), monitoreo y respuesta a incidentes en tiempo real (Blue Team), y seguridad en infraestructura cloud (Azure)."
-           data-en="Hybrid profile focused on tactical anticipation and analytical capability applied to offensive and defensive security: auditing and controlled exploitation (Red Team), real-time monitoring and incident response (Blue Team), and cloud infrastructure security (Azure).">
-          Perfil híbrido enfocado en anticipación táctica y capacidad analítica aplicada a la
-          seguridad ofensiva y defensiva: auditoría y explotación controlada (Red Team), monitoreo
-          y respuesta a incidentes en tiempo real (Blue Team), y seguridad en infraestructura cloud (Azure).
+           data-es="Especializado en cerrar la brecha entre el ataque y la defensa. Aplico metodología analítica de evaluación de riesgos para auditorías ofensivas (Red Team), triaje y respuesta a incidentes en tiempo real (Blue Team) y endurecimiento de infraestructura en la nube."
+           data-en="Specialized in bridging the gap between attack and defense. I apply analytical risk assessment methodology to offensive auditing (Red Team), real-time incident response (Blue Team), and cloud security hardening.">
+          Especializado en cerrar la brecha entre el ataque y la defensa. Aplico metodología analítica de evaluación de riesgos para auditorías ofensivas (Red Team), triaje y respuesta a incidentes en tiempo real (Blue Team) y endurecimiento de infraestructura en la nube.
         </p>
 
         <div class="hero__actions">
-          <a href="#proyectos" class="btn btn--primary" data-es="[ VER CASOS ]" data-en="[ VIEW CASES ]">[ VER CASOS ]</a>
-          <a href="#contacto" class="btn btn--ghost" data-es="[ CONTACTAR ]" data-en="[ GET IN TOUCH ]">[ CONTACTAR ]</a>
-        </div>
-
-        <div class="hero__meta">
-          <span class="hero__meta-item"><i class="pip pip--cloud" aria-hidden="true"></i>Santo Domingo, RD</span>
+          <a href="#proyectos" class="btn btn--primary" data-es="[ VER CASOS RESUELTOS ]" data-en="[ VIEW CASE FILES ]">[ VER CASOS RESUELTOS ]</a>
+          <a href="#contacto" class="btn btn--ghost" data-es="[ CONTACTAR ]" data-en="[ CONTACT ]">[ CONTACTAR ]</a>
         </div>
 
         <div class="langs">
-          <span class="lang-pill"><span class="lang-pill__code">ES</span><strong data-es="Nativo" data-en="Native">Nativo</strong></span>
-          <span class="lang-pill"><span class="lang-pill__code">EN</span><strong data-es="C1 · Avanzado" data-en="C1 · Advanced">C1 · Avanzado</strong></span>
+          <span class="lang-pill"><span class="lang-pill__code">ES</span> <strong data-es="Nativo" data-en="Native">Nativo</strong></span>
+          <span class="lang-pill"><span class="lang-pill__code">EN</span> <strong data-es="C1 (Avanzado)" data-en="C1 (Advanced)">C1 (Avanzado)</strong></span>
         </div>
       </div>
 
-      <div class="hero__panel">
-        <!-- ===== OPERATOR PROFILE CARD ===== -->
-        <div class="profile-card">
-          <div class="profile-card__head">
-            <span class="profile-card__tag" data-es="OPERATOR PROFILE" data-en="OPERATOR PROFILE">OPERATOR PROFILE</span>
-            <span class="profile-card__status">
-              <span class="status-dot status-dot--sm" aria-hidden="true"></span>
-              <span data-es="ACTIVO" data-en="ACTIVE">ACTIVO</span>
-            </span>
+      <!-- HTB Operator Card -->
+      <div class="operator-card">
+        <div class="operator-card__header">
+          <span class="operator-card__tag">[+] OPERATOR PROFILE // ACTIVE</span>
+          <span class="operator-card__id">ID: FD-809</span>
+        </div>
+        <div class="operator-card__body">
+          <div class="stat-group">
+            <div class="stat-info"><span class="stat-label">AUDIT & PENTESTING</span><span class="stat-value htb-green">90%</span></div>
+            <div class="stat-bar"><div class="stat-bar__fill" data-width="90%"></div></div>
           </div>
-
-          <dl class="profile-card__facts">
-            <div class="fact-row">
-              <dt data-es="ROL" data-en="ROLE">ROL</dt>
-              <dd data-es="Ingeniero de Ciberseguridad" data-en="Cybersecurity Engineer">Ingeniero de Ciberseguridad</dd>
-            </div>
-            <div class="fact-row">
-              <dt data-es="NIVEL DE INGLÉS" data-en="ENGLISH LEVEL">NIVEL DE INGLÉS</dt>
-              <dd>C1 — <span data-es="Avanzado" data-en="Advanced">Avanzado</span></dd>
-            </div>
-            <div class="fact-row">
-              <dt data-es="ENFOQUE OPERATIVO" data-en="OPERATIONAL FOCUS">ENFOQUE OPERATIVO</dt>
-              <dd data-es="Red / Blue / Cloud" data-en="Red / Blue / Cloud">Red / Blue / Cloud</dd>
-            </div>
-            <div class="fact-row">
-              <dt data-es="UBICACIÓN" data-en="LOCATION">UBICACIÓN</dt>
-              <dd>Santo Domingo, RD</dd>
-            </div>
-          </dl>
-
-          <div class="profile-card__bars">
-            <div class="skill-bar">
-              <div class="skill-bar__label">
-                <span data-es="Auditoría Ofensiva" data-en="Offensive Auditing">Auditoría Ofensiva</span>
-                <span class="skill-bar__pct">85%</span>
-              </div>
-              <div class="skill-bar__track"><div class="skill-bar__fill skill-bar__fill--red" style="width:85%"></div></div>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-bar__label">
-                <span data-es="Monitoreo &amp; Respuesta" data-en="Monitoring &amp; Response">Monitoreo &amp; Respuesta</span>
-                <span class="skill-bar__pct">80%</span>
-              </div>
-              <div class="skill-bar__track"><div class="skill-bar__fill skill-bar__fill--blue" style="width:80%"></div></div>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-bar__label">
-                <span data-es="Seguridad Cloud" data-en="Cloud Security">Seguridad Cloud</span>
-                <span class="skill-bar__pct">70%</span>
-              </div>
-              <div class="skill-bar__track"><div class="skill-bar__fill skill-bar__fill--cloud" style="width:70%"></div></div>
-            </div>
+          <div class="stat-group">
+            <div class="stat-info"><span class="stat-label">SOC & INCIDENT RESPONSE</span><span class="stat-value htb-blue">88%</span></div>
+            <div class="stat-bar"><div class="stat-bar__fill" data-width="88%"></div></div>
+          </div>
+          <div class="stat-group">
+            <div class="stat-info"><span class="stat-label">CLOUD & NETWORK SECURITY</span><span class="stat-value htb-cloud">85%</span></div>
+            <div class="stat-bar"><div class="stat-bar__fill" data-width="85%"></div></div>
+          </div>
+          <div class="stat-group">
+            <div class="stat-info"><span class="stat-label">THREAT INTEL & FORENSICS</span><span class="stat-value htb-purple">82%</span></div>
+            <div class="stat-bar"><div class="stat-bar__fill" data-width="82%"></div></div>
+          </div>
+          <div class="operator-meta">
+            <span>LOCATION: Santo Domingo, RD</span>
+            <span>CLEARANCE: Ready</span>
           </div>
         </div>
-
-        <!-- ===== TERMINAL ===== -->
-        <div class="terminal">
-          <div class="terminal__bar">
-            <span class="terminal__dot terminal__dot--red"></span>
-            <span class="terminal__dot terminal__dot--amber"></span>
-            <span class="terminal__dot terminal__dot--green"></span>
-            <span class="terminal__title">frank@htb-labs: ~</span>
-          </div>
-          <div class="terminal__body" id="terminalBody"></div>
-        </div>
+        <div class="console__body" id="consoleBody"></div>
       </div>
     </div>
   </section>
 
-  <!-- ===== SKILLS — LAB MODULES ===== -->
+  <!-- ===== SKILLS / LAB MODULES ===== -->
   <section class="section" id="skills">
     <div class="section__head">
-      <p class="eyebrow" data-es="// LAB MODULES" data-en="// LAB MODULES">// LAB MODULES</p>
-      <h2 data-es="Stack de seguridad" data-en="Security stack">Stack de seguridad</h2>
+      <p class="eyebrow">// LAB MODULES</p>
+      <h2 data-es="Perfil Técnico Híbrido" data-en="Hybrid Technical Profile">Perfil Técnico Híbrido</h2>
     </div>
 
-    <div class="modules modules--4">
+    <div class="modules">
       <article class="module module--red">
         <div class="module__head">
-          <h3 data-es="Red Team" data-en="Red Team">Red Team</h3>
+          <h3>Red Team</h3>
           <span class="badge badge--red">[OFFENSIVE]</span>
         </div>
-        <p class="module__desc" data-es="Auditoría y explotación controlada de vulnerabilidades." data-en="Auditing and controlled vulnerability exploitation.">Auditoría y explotación controlada de vulnerabilidades.</p>
+        <p class="module__desc" data-es="Auditoría de seguridad y análisis de vulnerabilidades." data-en="Security auditing and vulnerability assessment.">Auditoría de seguridad y análisis de vulnerabilidades.</p>
         <ul class="tags">
           <li>Nmap</li>
           <li>Metasploit</li>
           <li>XSS / SQLi</li>
           <li>CORS / SSRF</li>
+          <li>Pentesting Web</li>
         </ul>
       </article>
 
       <article class="module module--blue">
         <div class="module__head">
-          <h3 data-es="Blue Team" data-en="Blue Team">Blue Team</h3>
+          <h3>Blue Team</h3>
           <span class="badge badge--blue">[DEFENSIVE]</span>
         </div>
-        <p class="module__desc" data-es="Detección, correlación y respuesta a incidentes." data-en="Detection, correlation and incident response.">Detección, correlación y respuesta a incidentes.</p>
+        <p class="module__desc" data-es="Detección de amenazas y respuesta a incidentes." data-en="Threat detection and incident response.">Detección de amenazas y respuesta a incidentes.</p>
         <ul class="tags">
-          <li>Wazuh</li>
+          <li>SIEM / Wazuh</li>
           <li>EDR</li>
           <li>MS Defender</li>
           <li>Wireshark</li>
+          <li>Fortinet</li>
         </ul>
       </article>
 
       <article class="module module--purple">
         <div class="module__head">
-          <h3 data-es="Purple Team" data-en="Purple Team">Purple Team</h3>
+          <h3>Purple Team</h3>
           <span class="badge badge--purple">[HYBRID]</span>
         </div>
-        <p class="module__desc" data-es="Threat intel, forense y cumplimiento normativo." data-en="Threat intel, forensics and compliance.">Threat intel, forense y cumplimiento normativo.</p>
+        <p class="module__desc" data-es="Inteligencia de amenazas, forense y correlación." data-en="Threat intelligence, forensics, and correlation.">Inteligencia de amenazas, forense y correlación.</p>
         <ul class="tags">
+          <li>Threat Intel</li>
           <li>OSINT</li>
-          <li data-es="Forense Digital" data-en="Digital Forensics">Forense Digital</li>
+          <li>Informática Forense</li>
           <li>Python</li>
+          <li>Seguridad Financiera</li>
         </ul>
       </article>
 
       <article class="module module--cloud">
         <div class="module__head">
-          <h3 data-es="Cloud &amp; Networking" data-en="Cloud &amp; Networking">Cloud &amp; Networking</h3>
+          <h3>Cloud & Infra</h3>
           <span class="badge badge--cloud">[INFRASTRUCTURE]</span>
         </div>
-        <p class="module__desc" data-es="Redes y seguridad de identidad en la nube." data-en="Networking and cloud identity security.">Redes y seguridad de identidad en la nube.</p>
+        <p class="module__desc" data-es="Gestión de identidades y redes en la nube." data-en="Cloud identity and network management.">Gestión de identidades y redes en la nube.</p>
         <ul class="tags">
           <li>Azure VNets</li>
           <li>NSGs</li>
-          <li>Entra ID</li>
+          <li>Entra ID / IAM</li>
+          <li>VPN Site-to-Site</li>
           <li>TCP/IP</li>
         </ul>
       </article>
     </div>
   </section>
 
-  <!-- ===== PROYECTOS — CASE FILES ===== -->
+  <!-- ===== PROYECTOS / TARGET MACHINES ===== -->
   <section class="section" id="proyectos">
     <div class="section__head">
-      <p class="eyebrow" data-es="// CASE FILES" data-en="// CASE FILES">// CASE FILES</p>
-      <h2 data-es="Proyectos propios" data-en="Own projects">Proyectos propios</h2>
+      <p class="eyebrow">// TARGET MACHINES & CASE FILES</p>
+      <h2 data-es="Proyectos de Ciberseguridad" data-en="Cybersecurity Projects">Proyectos de Ciberseguridad</h2>
     </div>
 
     <div class="cases">
-      <article class="case case--blue">
-        <div class="case__id">CASE-001</div>
-        <div class="case__content">
-          <div class="case__top">
-            <h3>LogSentry</h3>
-            <span class="badge badge--blue">[BLUE TEAM · SOC]</span>
-          </div>
-          <p data-es="Analizador de logs Apache en Python que extrae IOCs, IPs frecuentes y patrones de tráfico sospechoso para detección de anomalías. Pensado para triaje rápido en operaciones con recursos limitados."
-             data-en="Python Apache log analyzer that extracts IOCs, frequent IPs and suspicious traffic patterns for anomaly detection. Built for fast triage in resource-limited operations.">
-            Analizador de logs Apache en Python que extrae IOCs, IPs frecuentes y patrones
-            de tráfico sospechoso para detección de anomalías. Pensado para triaje rápido
-            en operaciones con recursos limitados.
+      <article class="case-card">
+        <div class="case-card__side">
+          <span class="case-id">CASE-001</span>
+          <span class="badge badge--blue">[BLUE TEAM]</span>
+        </div>
+        <div class="case-card__content">
+          <h3>LogSentry — Apache Log Analyzer</h3>
+          <p data-es="Analizador de logs HTTP desarrollado en Python para la extracción automática de IOCs, análisis de patrones sospechosos e IP con comportamiento anómalo."
+             data-en="HTTP log analyzer written in Python for automated IOC extraction, suspicious pattern analysis, and anomalous IP behavior detection.">
+            Analizador de logs HTTP desarrollado en Python para la extracción automática de IOCs, análisis de patrones sospechosos e IP con comportamiento anómalo.
           </p>
           <ul class="tags">
             <li>Python</li>
-            <li data-es="Análisis de logs" data-en="Log analysis">Análisis de logs</li>
-            <li data-es="Extracción de IOCs" data-en="IOC extraction">Extracción de IOCs</li>
+            <li>Log Analysis</li>
+            <li>IOC Extraction</li>
+            <li>Triage SOC</li>
           </ul>
-          <a href="https://github.com/FrankDisla/logsentry" class="case__link" target="_blank" rel="noopener">
-            <span data-es="VER REPOSITORIO" data-en="VIEW REPOSITORY">VER REPOSITORIO</span> <span aria-hidden="true">→</span>
-          </a>
+          <a href="#" class="case-link">[ VER REPOSITORIO &rarr; ]</a>
         </div>
       </article>
 
-      <article class="case case--red">
-        <div class="case__id">CASE-002</div>
-        <div class="case__content">
-          <div class="case__top">
-            <h3>Auditor Web</h3>
-            <span class="badge badge--red">[RED TEAM · WEB AUDIT]</span>
-          </div>
-          <p data-es="Auditor de seguridad web en Python: SSL/TLS, cabeceras, XSS, SQLi, CORS, SSRF y enumeración de subdominios. Genera reporte PDF automático con puntuación CVSS."
-             data-en="Python web security auditor: SSL/TLS, headers, XSS, SQLi, CORS, SSRF and subdomain enumeration. Generates an automatic PDF report with CVSS scoring.">
-            Auditor de seguridad web en Python: SSL/TLS, cabeceras, XSS, SQLi, CORS, SSRF
-            y enumeración de subdominios. Genera reporte PDF automático con puntuación CVSS.
+      <article class="case-card">
+        <div class="case-card__side">
+          <span class="case-id">CASE-002</span>
+          <span class="badge badge--red">[RED TEAM]</span>
+        </div>
+        <div class="case-card__content">
+          <h3>WebSec Auditor v1</h3>
+          <p data-es="Herramienta de auditoría automatizada en Python para la evaluación de cabeceras de seguridad, certificados TLS/SSL, detección de CORS/SSRF y generación de reportes CVSS."
+             data-en="Automated security auditing tool in Python for header evaluation, TLS/SSL verification, CORS/SSRF detection, and CVSS report generation.">
+            Herramienta de auditoría automatizada en Python para la evaluación de cabeceras de seguridad, certificados TLS/SSL, detección de CORS/SSRF y generación de reportes CVSS.
           </p>
           <ul class="tags">
             <li>Python</li>
-            <li data-es="Pentesting Web" data-en="Web Pentesting">Pentesting Web</li>
-            <li>CVSS</li>
+            <li>Web Pentesting</li>
+            <li>CVSS Scoring</li>
+            <li>Reporting</li>
           </ul>
-          <a href="https://github.com/FrankDisla/auditor-v1" class="case__link" target="_blank" rel="noopener">
-            <span data-es="VER REPOSITORIO" data-en="VIEW REPOSITORY">VER REPOSITORIO</span> <span aria-hidden="true">→</span>
-          </a>
+          <a href="#" class="case-link">[ VER REPOSITORIO &rarr; ]</a>
         </div>
       </article>
     </div>
   </section>
 
-  <!-- ===== EXPERIENCIA ===== -->
-  <section class="section" id="experiencia">
-    <div class="section__head">
-      <p class="eyebrow" data-es="// EXPERIENCE LOG" data-en="// EXPERIENCE LOG">// EXPERIENCE LOG</p>
-      <h2 data-es="Experiencia práctica" data-en="Practical experience">Experiencia práctica</h2>
-    </div>
-
-    <ol class="timeline">
-      <li class="timeline__item">
-        <div class="timeline__time">2025 — 2026</div>
-        <div class="timeline__content">
-          <h3 data-es="Operador de Seguridad — Formación Práctica" data-en="Security Operator — Practical Training">Operador de Seguridad — Formación Práctica</h3>
-          <p class="timeline__org">INDOTEL / BID – Talento Digital / CYMETRIA Group</p>
-          <ul>
-            <li data-es="Completé 80 horas de formación intensiva en Threat Intelligence, respuesta a incidentes, criptografía y seguridad IoT."
-                data-en="Completed 80 hours of intensive training in Threat Intelligence, incident response, cryptography and IoT security.">Completé 80 horas de formación intensiva en Threat Intelligence, respuesta a incidentes, criptografía y seguridad IoT.</li>
-            <li data-es="Apliqué el ciclo PICERL en escenarios simulados: preparación, identificación, contención, erradicación y recuperación."
-                data-en="Applied the PICERL cycle in simulated scenarios: preparation, identification, containment, eradication and recovery.">Apliqué el ciclo PICERL en escenarios simulados: preparación, identificación, contención, erradicación y recuperación.</li>
-            <li data-es="Correlacioné eventos en plataformas SIEM y EDR, ejecutando triaje de alertas y documentación de IOCs."
-                data-en="Correlated events across SIEM and EDR platforms, executing alert triage and IOC documentation.">Correlacioné eventos en plataformas SIEM y EDR, ejecutando triaje de alertas y documentación de IOCs.</li>
-            <li data-es="Analicé campañas de phishing/spear-phishing y tráfico de red con Wireshark para identificar infraestructura atacante y TTPs."
-                data-en="Analyzed phishing/spear-phishing campaigns and network traffic with Wireshark to identify attacker infrastructure and TTPs.">Analicé campañas de phishing/spear-phishing y tráfico de red con Wireshark para identificar infraestructura atacante y TTPs.</li>
-          </ul>
-        </div>
-      </li>
-
-      <li class="timeline__item">
-        <div class="timeline__time" data-es="2024 — Presente" data-en="2024 — Present">2024 — Presente</div>
-        <div class="timeline__content">
-          <h3 data-es="Analista Purple Team — Entornos Simulados" data-en="Purple Team Analyst — Simulated Environments">Analista Purple Team — Entornos Simulados</h3>
-          <p class="timeline__org" data-es="Formación Autónoma / Plataformas Especializadas" data-en="Self-driven Training / Specialized Platforms">Formación Autónoma / Plataformas Especializadas</p>
-          <ul>
-            <li data-es="Ejecuté pruebas ofensivas con Metasploit y Nmap para comprender TTPs de atacantes y reforzar controles defensivos."
-                data-en="Executed offensive testing with Metasploit and Nmap to understand attacker TTPs and strengthen defensive controls.">Ejecuté pruebas ofensivas con Metasploit y Nmap para comprender TTPs de atacantes y reforzar controles defensivos.</li>
-            <li data-es="Generé reportes de superficie de ataque a partir de escaneos y enumeración de servicios."
-                data-en="Produced attack-surface reports from scans and service enumeration.">Generé reportes de superficie de ataque a partir de escaneos y enumeración de servicios.</li>
-            <li data-es="Apliqué peritaje e informática forense, preservando cadena de custodia y evidencia digital."
-                data-en="Applied digital forensics practices, preserving chain of custody and digital evidence.">Apliqué peritaje e informática forense, preservando cadena de custodia y evidencia digital.</li>
-            <li data-es="Hardenicé sistemas Windows y Linux conforme a políticas de seguridad."
-                data-en="Hardened Windows and Linux systems in line with security policies.">Hardenicé sistemas Windows y Linux conforme a políticas de seguridad.</li>
-          </ul>
-        </div>
-      </li>
-
-      <li class="timeline__item">
-        <div class="timeline__time" data-es="2025 — Presente" data-en="2025 — Present">2025 — Presente</div>
-        <div class="timeline__content">
-          <h3 data-es="Ingeniería en Ciberseguridad" data-en="Cybersecurity Engineering">Ingeniería en Ciberseguridad</h3>
-          <p class="timeline__org">UNICARIBE, Santo Domingo</p>
-        </div>
-      </li>
-    </ol>
-  </section>
-
-  <!-- ===== CERTIFICACIONES — HTB ACADEMY BADGES ===== -->
+  <!-- ===== CERTIFICACIONES / HTB ACADEMY BADGES ===== -->
   <section class="section" id="certificaciones">
     <div class="section__head">
-      <p class="eyebrow" data-es="// ACADEMY BADGES" data-en="// ACADEMY BADGES">// ACADEMY BADGES</p>
-      <h2 data-es="Formación continua" data-en="Continuous training">Formación continua</h2>
+      <p class="eyebrow">// HTB ACADEMY & FORMACIÓN CONTINUA</p>
+      <h2 data-es="Certificaciones y Capacitación" data-en="Certifications & Training">Certificaciones y Capacitación</h2>
     </div>
 
-    <div class="cert-filters" id="certFilters" role="group" aria-label="Filtrar certificaciones">
-      <button class="filter-tab is-active" type="button" data-filter="all" data-es="[ ALL ]" data-en="[ ALL ]">[ ALL ]</button>
-      <button class="filter-tab" type="button" data-filter="red" data-es="[ RED TEAM ]" data-en="[ RED TEAM ]">[ RED TEAM ]</button>
-      <button class="filter-tab" type="button" data-filter="blue" data-es="[ BLUE TEAM ]" data-en="[ BLUE TEAM ]">[ BLUE TEAM ]</button>
-      <button class="filter-tab" type="button" data-filter="purple" data-es="[ PURPLE ]" data-en="[ PURPLE ]">[ PURPLE ]</button>
-      <button class="filter-tab" type="button" data-filter="cloud" data-es="[ CLOUD ]" data-en="[ CLOUD ]">[ CLOUD ]</button>
+    <div class="htb-tabs">
+      <button class="htb-tab is-active" data-filter="all">[ ALL ]</button>
+      <button class="htb-tab" data-filter="red">[ RED TEAM ]</button>
+      <button class="htb-tab" data-filter="blue">[ BLUE TEAM ]</button>
+      <button class="htb-tab" data-filter="purple">[ PURPLE ]</button>
+      <button class="htb-tab" data-filter="cloud">[ CLOUD ]</button>
     </div>
 
-    <div class="certs" id="certGrid">
-
-      <div class="htb-module-badge" data-category="purple">
-        <div class="htb-module-badge__row">
-          <span class="tier tier--0">[TIER 0]</span>
-          <span class="diff diff--easy">[EASY]</span>
-          <span class="status status--certified">[CERTIFIED]</span>
+    <div class="cert-grid">
+      <div class="htb-module-badge" data-category="blue">
+        <div class="badge-top">
+          <span class="badge-tier">[TIER 2]</span>
+          <span class="badge-diff htb-green">[MEDIUM]</span>
         </div>
         <h4>Cybersecurity Certification Associate</h4>
-        <p class="htb-module-badge__issuer">Certiplus LLC · Jun 2026</p>
-        <p class="htb-module-badge__hash">VERIFIED // ID: HTB-CERT-2026-101</p>
+        <p class="badge-issuer">Certiplus LLC · 2026</p>
+        <div class="badge-status">[100% COMPLETED]</div>
+        <div class="badge-hash">VERIFIED // ID: CERT-2026-809</div>
       </div>
 
       <div class="htb-module-badge" data-category="blue">
-        <div class="htb-module-badge__row">
-          <span class="tier tier--1">[TIER 1]</span>
-          <span class="diff diff--medium">[MEDIUM]</span>
-          <span class="status status--complete">[100% COMPLETED]</span>
+        <div class="badge-top">
+          <span class="badge-tier">[TIER 2]</span>
+          <span class="badge-diff htb-green">[80 HOURS]</span>
         </div>
-        <h4 data-es="Ciberseguridad – Nivel Intermedio (80h)" data-en="Cybersecurity – Intermediate Level (80h)">Ciberseguridad – Nivel Intermedio (80h)</h4>
-        <p class="htb-module-badge__issuer">INDOTEL / BID Talento Digital / CYMETRIA Group · Ene 2026</p>
-        <p class="htb-module-badge__hash">VERIFIED // ID: HTB-CERT-2026-102</p>
+        <h4>Operador de Seguridad - Formación Práctica</h4>
+        <p class="badge-issuer">INDOTEL / BID / CYMETRIA Group · 2026</p>
+        <div class="badge-status">[CERTIFIED]</div>
+        <div class="badge-hash">VERIFIED // ID: IND-2026-991</div>
       </div>
 
       <div class="htb-module-badge" data-category="cloud">
-        <div class="htb-module-badge__row">
-          <span class="tier tier--1">[TIER 1]</span>
-          <span class="diff diff--medium">[MEDIUM]</span>
-          <span class="status status--complete">[100% COMPLETED]</span>
+        <div class="badge-top">
+          <span class="badge-tier">[TIER 1]</span>
+          <span class="badge-diff htb-cloud">[EASY]</span>
         </div>
-        <h4 data-es="Consideraciones de Seguridad en la Arquitectura" data-en="Security Considerations in Architecture">Consideraciones de Seguridad en la Arquitectura</h4>
-        <p class="htb-module-badge__issuer">UBITS · Ago 2026</p>
-        <p class="htb-module-badge__hash">VERIFIED // ID: HTB-CERT-2026-103</p>
+        <h4>Networking Basics & Security</h4>
+        <p class="badge-issuer">Cisco Networking Academy · 2026</p>
+        <div class="badge-status">[100% COMPLETED]</div>
+        <div class="badge-hash">VERIFIED // ID: CSCO-NET-2026</div>
       </div>
 
       <div class="htb-module-badge" data-category="purple">
-        <div class="htb-module-badge__row">
-          <span class="tier tier--0">[TIER 0]</span>
-          <span class="diff diff--easy">[EASY]</span>
-          <span class="status status--complete">[100% COMPLETED]</span>
+        <div class="badge-top">
+          <span class="badge-tier">[TIER 1]</span>
+          <span class="badge-diff htb-purple">[MEDIUM]</span>
         </div>
-        <h4 data-es="Fundamentos de los Derechos Digitales" data-en="Fundamentals of Digital Rights">Fundamentos de los Derechos Digitales</h4>
-        <p class="htb-module-badge__issuer">UBITS · Ago 2026</p>
-        <p class="htb-module-badge__hash">VERIFIED // ID: HTB-CERT-2026-104</p>
-      </div>
-
-      <div class="htb-module-badge" data-category="cloud">
-        <div class="htb-module-badge__row">
-          <span class="tier tier--0">[TIER 0]</span>
-          <span class="diff diff--easy">[EASY]</span>
-          <span class="status status--complete">[100% COMPLETED]</span>
-        </div>
-        <h4>Networking Basics</h4>
-        <p class="htb-module-badge__issuer">Cisco Networking Academy · Ago 2026</p>
-        <p class="htb-module-badge__hash">VERIFIED // ID: HTB-CERT-2026-105</p>
-      </div>
-
-      <div class="htb-module-badge" data-category="purple">
-        <div class="htb-module-badge__row">
-          <span class="tier tier--1">[TIER 1]</span>
-          <span class="diff diff--medium">[MEDIUM]</span>
-          <span class="status status--complete">[100% COMPLETED]</span>
-        </div>
-        <h4 data-es="Implementa Frameworks de Ciberseguridad Financiera" data-en="Implementing Financial Cybersecurity Frameworks">Implementa Frameworks de Ciberseguridad Financiera</h4>
-        <p class="htb-module-badge__issuer">UBITS · Jul 2026</p>
-        <p class="htb-module-badge__hash">VERIFIED // ID: HTB-CERT-2026-106</p>
-      </div>
-
-      <div class="htb-module-badge" data-category="purple">
-        <div class="htb-module-badge__row">
-          <span class="tier tier--0">[TIER 0]</span>
-          <span class="diff diff--easy">[EASY]</span>
-          <span class="status status--complete">[100% COMPLETED]</span>
-        </div>
-        <h4 data-es="Estrategias de Protección de Datos Personales" data-en="Personal Data Protection Strategies">Estrategias de Protección de Datos Personales</h4>
-        <p class="htb-module-badge__issuer">UBITS · Jul 2026</p>
-        <p class="htb-module-badge__hash">VERIFIED // ID: HTB-CERT-2026-107</p>
-      </div>
-
-      <div class="htb-module-badge" data-category="purple">
-        <div class="htb-module-badge__row">
-          <span class="tier tier--1">[TIER 1]</span>
-          <span class="diff diff--medium">[MEDIUM]</span>
-          <span class="status status--complete">[100% COMPLETED]</span>
-        </div>
-        <h4 data-es="Ciberseguridad Nacional: Fundamentos, Prevención y Respuestas" data-en="National Cybersecurity: Fundamentals, Prevention &amp; Response">Ciberseguridad Nacional: Fundamentos, Prevención y Respuestas</h4>
-        <p class="htb-module-badge__issuer">CNCS, RD · Jul 2026</p>
-        <p class="htb-module-badge__hash">VERIFIED // ID: HTB-CERT-2026-108</p>
-      </div>
-
-      <div class="htb-module-badge" data-category="purple">
-        <div class="htb-module-badge__row">
-          <span class="tier tier--0">[TIER 0]</span>
-          <span class="diff diff--easy">[EASY]</span>
-          <span class="status status--complete">[100% COMPLETED]</span>
-        </div>
-        <h4 data-es="Introducción a la Ciberseguridad" data-en="Introduction to Cybersecurity">Introducción a la Ciberseguridad</h4>
-        <p class="htb-module-badge__issuer">Cisco Networking Academy · Feb 2026</p>
-        <p class="htb-module-badge__hash">VERIFIED // ID: HTB-CERT-2026-109</p>
-      </div>
-
-      <div class="htb-module-badge" data-category="blue">
-        <div class="htb-module-badge__row">
-          <span class="tier tier--2">[TIER 2]</span>
-          <span class="diff diff--medium">[MEDIUM]</span>
-          <span class="status status--complete">[100% COMPLETED]</span>
-        </div>
-        <h4 data-es="Peritaje e Informática Forense (CSI)" data-en="Digital Forensics (CSI)">Peritaje e Informática Forense (CSI)</h4>
-        <p class="htb-module-badge__issuer">Hacker Mentor · Abr 2026</p>
-        <p class="htb-module-badge__hash">VERIFIED // ID: HTB-CERT-2026-110</p>
+        <h4>Peritaje e Informática Forense (CSI)</h4>
+        <p class="badge-issuer">Hacker Mentor · 2026</p>
+        <div class="badge-status">[COMPLETED]</div>
+        <div class="badge-hash">VERIFIED // ID: FORENSIC-809</div>
       </div>
 
       <div class="htb-module-badge" data-category="red">
-        <div class="htb-module-badge__row">
-          <span class="tier tier--1">[TIER 1]</span>
-          <span class="diff diff--medium">[MEDIUM]</span>
-          <span class="status status--complete">[100% COMPLETED]</span>
-        </div>
-        <h4 data-es="Ciberseguridad y Hacking Ético" data-en="Cybersecurity and Ethical Hacking">Ciberseguridad y Hacking Ético</h4>
-        <p class="htb-module-badge__issuer">BIG School · Abr 2026</p>
-        <p class="htb-module-badge__hash">VERIFIED // ID: HTB-CERT-2026-111</p>
-      </div>
-
-      <div class="htb-module-badge" data-category="red">
-        <div class="htb-module-badge__row">
-          <span class="tier tier--0">[TIER 0]</span>
-          <span class="diff diff--easy">[EASY]</span>
-          <span class="status status--complete">[100% COMPLETED]</span>
+        <div class="badge-top">
+          <span class="badge-tier">[TIER 1]</span>
+          <span class="badge-diff htb-red">[EASY]</span>
         </div>
         <h4>Nmap For Ethical Hacking Bootcamp</h4>
-        <p class="htb-module-badge__issuer">Udemy · Dic 2025</p>
-        <p class="htb-module-badge__hash">VERIFIED // ID: HTB-CERT-2025-112</p>
-      </div>
-
-      <div class="htb-module-badge" data-category="blue">
-        <div class="htb-module-badge__row">
-          <span class="tier tier--0">[TIER 0]</span>
-          <span class="diff diff--easy">[EASY]</span>
-          <span class="status status--complete">[100% COMPLETED]</span>
-        </div>
-        <h4 data-es="Detecta y Defiéndete del Phishing" data-en="Detect and Defend Against Phishing">Detecta y Defiéndete del Phishing</h4>
-        <p class="htb-module-badge__issuer">Udemy · Dic 2025</p>
-        <p class="htb-module-badge__hash">VERIFIED // ID: HTB-CERT-2025-113</p>
+        <p class="badge-issuer">Udemy · 2025</p>
+        <div class="badge-status">[COMPLETED]</div>
+        <div class="badge-hash">VERIFIED // ID: UDM-NMAP-2025</div>
       </div>
 
       <div class="htb-module-badge" data-category="red">
-        <div class="htb-module-badge__row">
-          <span class="tier tier--1">[TIER 1]</span>
-          <span class="diff diff--medium">[MEDIUM]</span>
-          <span class="status status--complete">[100% COMPLETED]</span>
+        <div class="badge-top">
+          <span class="badge-tier">[TIER 2]</span>
+          <span class="badge-diff htb-red">[MEDIUM]</span>
         </div>
-        <h4 data-es="Hacking Ético con Metasploit Framework" data-en="Ethical Hacking with Metasploit Framework">Hacking Ético con Metasploit Framework</h4>
-        <p class="htb-module-badge__issuer">Udemy · Nov 2025</p>
-        <p class="htb-module-badge__hash">VERIFIED // ID: HTB-CERT-2025-114</p>
-      </div>
-
-      <div class="htb-module-badge" data-category="red">
-        <div class="htb-module-badge__row">
-          <span class="tier tier--0">[TIER 0]</span>
-          <span class="diff diff--easy">[EASY]</span>
-          <span class="status status--complete">[100% COMPLETED]</span>
-        </div>
-        <h4 data-es="CFEH – Fundamentos del Ethical Hacking" data-en="CFEH – Ethical Hacking Fundamentals">CFEH – Fundamentos del Ethical Hacking</h4>
-        <p class="htb-module-badge__issuer">Udemy / ExorciseThat · Sep 2025</p>
-        <p class="htb-module-badge__hash">VERIFIED // ID: HTB-CERT-2025-115</p>
-      </div>
-
-      <div class="htb-module-badge" data-category="red">
-        <div class="htb-module-badge__row">
-          <span class="tier tier--0">[TIER 0]</span>
-          <span class="diff diff--easy">[EASY]</span>
-          <span class="status status--complete">[100% COMPLETED]</span>
-        </div>
-        <h4 data-es="Anonimato en la Red: Privacidad y Deep Web" data-en="Anonymity Online: Privacy and the Deep Web">Anonimato en la Red: Privacidad y Deep Web</h4>
-        <p class="htb-module-badge__issuer">Udemy · Sep 2025</p>
-        <p class="htb-module-badge__hash">VERIFIED // ID: HTB-CERT-2025-116</p>
-      </div>
-
-    </div>
-
-    <p class="cert-empty" id="certEmpty" hidden data-es="No hay certificaciones en esta categoría." data-en="No certifications in this category.">No hay certificaciones en esta categoría.</p>
-  </section>
-
-  <!-- ===== CONTACTO ===== -->
-  <section class="section section--contact" id="contacto">
-    <div class="contact">
-      <p class="eyebrow">root@frankdisla:~$ contact --init</p>
-      <h2 data-es="Hablemos de tu equipo de seguridad" data-en="Let's talk about your security team">Hablemos de tu equipo de seguridad</h2>
-      <p class="contact__sub"
-         data-es="Abierto a roles en Ciberseguridad — Red Team, Blue Team, SOC y prevención de fraude en el sector financiero."
-         data-en="Open to Cybersecurity roles — Red Team, Blue Team, SOC and fraud prevention in the financial sector.">Abierto a roles en Ciberseguridad — Red Team, Blue Team, SOC y prevención de fraude en el sector financiero.</p>
-
-      <div class="contact__links">
-        <a href="mailto:frankluisdislavalenzuela@gmail.com" class="btn btn--primary">frankluisdislavalenzuela@gmail.com</a>
-        <a href="https://github.com/FrankDisla" target="_blank" rel="noopener" class="btn btn--ghost">GitHub ↗</a>
-        <a href="https://www.linkedin.com/in/frank-luis-disla-valenzuela-5024a9226" target="_blank" rel="noopener" class="btn btn--ghost">LinkedIn ↗</a>
+        <h4>Hacking Ético con Metasploit Framework</h4>
+        <p class="badge-issuer">Udemy · 2025</p>
+        <div class="badge-status">[COMPLETED]</div>
+        <div class="badge-hash">VERIFIED // ID: UDM-MSF-2025</div>
       </div>
     </div>
   </section>
 
-</main>
+  <!-- ===== FOOTER / CONTACT ===== -->
+  <footer class="footer" id="contacto">
+    <div class="footer__inner">
+      <div class="footer__info">
+        <h3>[+] INICIAR CONEXIÓN DIRECTA</h3>
+        <p>Santo Domingo, República Dominicana | Disponible para modalidad Remota o Híbrida.</p>
+      </div>
+      <div class="footer__links">
+        <a href="mailto:frankdisla.valenzuela@gmail.com" class="btn btn--primary">[ ENVIAR CORREO ]</a>
+        <a href="https://linkedin.com" target="_blank" class="btn btn--ghost">[ LINKEDIN ]</a>
+        <a href="https://github.com" target="_blank" class="btn btn--ghost">[ GITHUB ]</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      &copy; 2026 Frank Luis Disla Valenzuela // HTB Inspired SOC Dashboard
+    </div>
+  </footer>
 
-<footer class="footer">
-  <div>
-    <p>Frank Luis Disla Valenzuela · Santo Domingo, RD</p>
-    <p class="footer__muted"><span data-es="Última actualización:" data-en="Last updated:">Última actualización:</span> <span id="lastUpdated"></span></p>
-  </div>
-  <p class="footer__signature" data-es="// HTB Apprentice · Purple Team Analyst" data-en="// HTB Apprentice · Purple Team Analyst">// HTB Apprentice · Purple Team Analyst</p>
-</footer>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
