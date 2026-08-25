@@ -254,3 +254,28 @@ function timestamp() {
 const initialLang = getInitialLang();
 applyLang(initialLang);
 renderLastUpdated(initialLang);
+
+// ==========================================================
+// Filtro de certificaciones por categoría (Red/Blue/Purple/Cloud)
+// ==========================================================
+const certLegend = document.getElementById('certLegend');
+const certsList = document.getElementById('certsList');
+
+if (certLegend && certsList) {
+  const certCards = certsList.querySelectorAll('.cert');
+
+  certLegend.addEventListener('click', (e) => {
+    const btn = e.target.closest('.cert-legend__item');
+    if (!btn) return;
+
+    certLegend.querySelectorAll('.cert-legend__item').forEach(item => {
+      item.classList.toggle('is-active', item === btn);
+    });
+
+    const filter = btn.dataset.filter;
+    certCards.forEach(card => {
+      const matches = filter === 'all' || card.classList.contains(`cert--${filter}`);
+      card.classList.toggle('is-hidden', !matches);
+    });
+  });
+}
