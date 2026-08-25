@@ -130,6 +130,17 @@ function typeConsole(lang) {
 
   consoleBody.innerHTML = '';
   let lineIndex = 0;
+  let liveCursor = null; // única referencia al cursor visible; nunca desaparece
+                          // del todo, solo se reubica — así la terminal siempre
+                          // se ve "encendida" y en uso, como una real.
+
+  function placeCursor(parentEl) {
+    if (liveCursor) liveCursor.remove();
+    liveCursor = document.createElement('span');
+    liveCursor.className = 'console__cursor';
+    parentEl.appendChild(liveCursor);
+    return liveCursor;
+  }
 
   function nextLine() {
     if (myToken !== consoleRunToken) return; // idioma cambió a mitad de animación
@@ -153,11 +164,8 @@ function typeConsole(lang) {
     const textEl = document.createElement('span');
     lineEl.appendChild(textEl);
 
-    const cursor = document.createElement('span');
-    cursor.className = 'console__cursor';
-    lineEl.appendChild(cursor);
-
     consoleBody.appendChild(lineEl);
+    placeCursor(lineEl);
 
     let charIndex = 0;
     const typeSpeed = 18;
@@ -169,7 +177,8 @@ function typeConsole(lang) {
         charIndex++;
         setTimeout(typeChar, typeSpeed);
       } else {
-        cursor.remove();
+        // El cursor se queda parpadeando sobre esta línea durante la pausa;
+        // recién se retira cuando arranca la siguiente (terminal siempre "viva").
         lineIndex++;
         setTimeout(nextLine, 500);
       }
@@ -195,11 +204,8 @@ function typeConsole(lang) {
     cmdEl.className = 'console__prompt-cmd';
     promptLine.appendChild(cmdEl);
 
-    const cursor = document.createElement('span');
-    cursor.className = 'console__cursor';
-    promptLine.appendChild(cursor);
-
     consoleBody.appendChild(promptLine);
+    placeCursor(promptLine);
 
     const idleWait = 1300 + Math.random() * 1000; // pausa "pensando" antes de teclear
     setTimeout(() => {
@@ -213,18 +219,18 @@ function typeConsole(lang) {
         if (charIndex < command.length) {
           cmdEl.textContent += command.charAt(charIndex);
           charIndex++;
+          promptLine.appendChild(liveCursor); // el cursor sigue al final del texto
           setTimeout(typeCmdChar, typeSpeed);
         } else {
+          // El cursor sigue parpadeando al final del comando "escrito" hasta
+          // el instante justo antes de limpiar la pantalla y reiniciar.
           setTimeout(() => {
             if (myToken !== consoleRunToken) return;
-            cursor.remove();
-            setTimeout(() => {
-              if (myToken !== consoleRunToken) return;
-              consoleBody.innerHTML = '';
-              lineIndex = 0;
-              nextLine();
-            }, 550);
-          }, 450);
+            liveCursor = null;
+            consoleBody.innerHTML = '';
+            lineIndex = 0;
+            nextLine();
+          }, 900);
         }
       }
       typeCmdChar();
